@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Daily Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="container">
+<header>
+  <div><div class="eyebrow">MY DAILY TRACKER</div><h1 id="dateTitle"></h1></div>
+  <button id="clearBtn" class="secondary">Clear today</button>
+</header>
+
+<section class="stats">
+  <div><span>Tasks</span><b id="taskCount">0</b></div>
+  <div><span>Completed</span><b id="completedCount">0</b></div>
+  <div><span>Task progress</span><b id="progress">0%</b></div>
+</section>
+
+<section class="card">
+<h2>Add planned task</h2>
+<form id="taskForm">
+<input id="taskTitle" placeholder="Task name" required>
+<select id="priority"><option value="high">🔴 High</option><option value="medium" selected>🟡 Medium</option><option value="low">🟢 Low</option></select>
+<select id="hour"></select>
+<input id="details" placeholder="Details (optional)">
+<button type="submit">Add task</button>
+</form>
+</section>
+
+<section class="card">
+<div class="section-head"><h2>Planned schedule</h2><span id="taskMessage"></span></div>
+<div id="taskList"></div>
+</section>
+
+<section class="card">
+<h2>What I actually did</h2>
+<p class="hint">The time slots are already there. Write what you did and tick Productive if that hour counts.</p>
+<div class="activity-table">
+  <div class="activity-head"><div>Time</div><div>What did you do?</div><div>Productive</div></div>
+  <div id="activityList"></div>
+</div>
+</section>
+
+<section class="card">
+<h2>Daily productivity</h2>
+<div class="productivity">
+  <div><span>Planned hours</span><b id="plannedHours">0 h</b></div>
+  <div><span>Actual productive hours</span><b id="productiveHours">0 h</b></div>
+  <div><span>Execution</span><b id="executionRate">0%</b></div>
+</div>
+</section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
