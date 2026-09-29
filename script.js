@@ -1,3 +1,9 @@
+const SUPABASE_URL = https://efzitgnvfsiwifubuvgk.supabase.co;
+const SUPABASE_ANON_KEY = sb_publishable_LJqVj8uXor5kXhtK-5EeOg_PMRju69X;
+
+const { createClient } = window.supabase;
+const supabase = createClient(https://efzitgnvfsiwifubuvgk.supabase.co, sb_publishable_LJqVj8uXor5kXhtK-5EeOg_PMRju69X);
+
 const $=id=>document.getElementById(id);
 const today=new Date(), dateKey=today.toLocaleDateString("en-CA");
 $("dateTitle").textContent=today.toLocaleDateString(undefined,{weekday:"long",day:"numeric",month:"long",year:"numeric"});
